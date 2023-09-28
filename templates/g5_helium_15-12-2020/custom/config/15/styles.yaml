@@ -1,0 +1,13 @@
+preset: preset1
+base:
+  background: ''
+header:
+  background-overlay: disabled
+intro:
+  background: '#ffffff'
+  text-color: '#424753'
+offcanvas:
+  width: 12rem
+breakpoints:
+  large-desktop-container: 75rem
+  desktop-container: 60rem

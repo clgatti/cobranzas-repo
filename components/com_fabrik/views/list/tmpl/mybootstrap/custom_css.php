@@ -1,0 +1,94 @@
+<?php
+/**
+ * Fabrik List Template: Default Custom CSS
+ *
+ * @package     Joomla
+ * @subpackage  Fabrik
+ * @copyright   Copyright (C) 2005-2016  Media A-Team, Inc. - All rights reserved.
+ * @license     GNU/GPL http://www.gnu.org/copyleft/gpl.html
+ */
+
+/**
+* If you need to make small adjustments or additions to the CSS for a Fabrik
+* list template, you can create a custom_css.php file, which will be loaded after
+* the main template_css.php for the template.
+*
+* This file will be invoked as a PHP file, so the list ID
+* can be used in order to narrow the scope of any style changes.  You do
+* this by prepending #listform_$c to any selectors you use.  This will become
+* (say) #listform_12, owhich will be the HTML ID of your list on the page.
+*
+* See examples below, which you should remove if you copy this file.
+*
+* Don't edit anything outside of the BEGIN and END comments.
+*
+* For more on custom CSS, see the Wiki at:
+*
+* http://www.fabrikar.com/forums/index.php?wiki/form-and-details-templates/#the-custom-css-file
+*
+* NOTE - for backward compatibility with Fabrik 2.1, and in case you
+* just prefer a simpler CSS file, without the added PHP parsing that
+* allows you to be be more specific in your selectors, we will also include
+* a custom.css we find in the same location as this file.
+*
+*/
+
+header('Content-type: text/css');
+$c = $_REQUEST['c'];
+echo <<<EOT
+/* BEGIN - Your CSS styling starts here */
+
+
+
+#listform_$c .cobranzas___monto_comision_derivador	 {
+    width: 200px !important;
+}
+#listform_$c .cobranzas___id_derivador	 {
+    width: 400px !important;
+}
+#listform_$c .cobranzas___monto_profesional_interviniente	 {
+    width: 200px !important;
+}
+#listform_$c .cobranzas___id_profesional_interviniente	 {
+    width: 400px !important;
+}
+#listform_$c .ingresos_egresos___descripcion_ingreso_egreso	 {
+    width: 400px !important;
+}
+#listform_$c .ingresos_egresos___monto_ingreso_egreso	 {
+    width: 200px !important;
+}
+#listform_$c .cuotas___id_cliente	 {
+    width: 400px !important;
+}
+
+
+#listform_28_com_fabrik_28 th.fabrik_actions  {
+display: none;
+
+}
+#listform_$c .fabrikForm {
+	margin-top: 25px !important;
+}
+#listform_$c .fabrikDataContainer {overflow: auto;}
+
+
+#listform_$c .cobranzas___saldo{
+     color: red;	
+	text-align:right;
+}
+
+.listform_$c tr.fabrik_groupheading.info {background:green;color:yellow}
+.listform_$c .fabrik_groupheading a {color:yellow}
+
+#listform_3_com_fabrik_3 tr.elementname_my_value td{
+background-color: green;}
+
+
+#listform_$c tr.tipo_de_ingreso_egreso0 td.ingresos_egresos___monto_ingreso_egreso {color:green;}
+#listform_$c tr.tipo_de_ingreso_egreso1 td.ingresos_egresos___monto_ingreso_egreso {color:red;}
+
+
+
+/* END - Your CSS styling ends here */
+EOT;

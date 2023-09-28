@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.1" type="package" method="upgrade">
+	<name>PKG_CUSTOMRECAPTCHA</name>
+	<author>Olivier Buisard</author>
+	<creationDate>9/19/2017</creationDate>
+	<packagename>customrecaptcha</packagename>
+	<copyright>Copyright (C) 2011 Simplify Your Web. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<url>http://www.simplifyyourweb.com/</url>
+	<packager>Olivier Buisard</packager>
+ 	<packagerurl>http://www.simplifyyourweb.com/</packagerurl>
+	<version>2.2.0</version>
+	<description>PKG_CUSTOMRECAPTCHA_XML_DESCRIPTION</description> 
+	<scriptfile>installer.php</scriptfile>
+	<languages>
+		<language tag="da-DK">language/da-DK/da-DK.pkg_customrecaptcha.sys.ini</language>
+		<language tag="de-DE">language/de-DE/de-DE.pkg_customrecaptcha.sys.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.pkg_customrecaptcha.sys.ini</language>
+		<language tag="es-ES">language/es-ES/es-ES.pkg_customrecaptcha.sys.ini</language>
+		<language tag="fr-FR">language/fr-FR/fr-FR.pkg_customrecaptcha.sys.ini</language>
+		<language tag="it-IT">language/it-IT/it-IT.pkg_customrecaptcha.sys.ini</language>
+		<language tag="nl-NL">language/nl-NL/nl-NL.pkg_customrecaptcha.sys.ini</language>
+		<language tag="pt-BR">language/pt-BR/pt-BR.pkg_customrecaptcha.sys.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.pkg_customrecaptcha.sys.ini</language>
+		<language tag="sv-SE">language/sv-SE/sv-SE.pkg_customrecaptcha.sys.ini</language>
+		<language tag="tr-TR">language/tr-TR/tr-TR.pkg_customrecaptcha.sys.ini</language>
+	</languages>
+ 	<files folder="packages">
+		<file type="plugin" id="customrecaptcha" group="captcha">plg_captcha_customrecaptcha.zip</file>
+	</files>
+	<updateservers>
+		<server type="extension" priority="1" name="Custom reCaptcha auto updater">http://www.barejoomlatemplates.com/autoupdates/customrecaptcha/customrecaptcha-pkg-update.xml</server>
+	</updateservers>
+</extension>

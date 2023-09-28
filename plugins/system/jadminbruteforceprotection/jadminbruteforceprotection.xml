@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<extension type="plugin" group="system" method="upgrade" version="2.5">
+	<name>System - Admin Bruteforce Protection</name>
+	<author>SiteGuarding.com</author>
+	<creationDate>17 Apr 2017</creationDate>
+	<copyright>SiteGuarding.com</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>support@siteguarding.com</authorEmail>
+	<authorUrl>www.siteguarding.com</authorUrl>
+	<version>1.4</version>
+	<description>JABP_PLG_INSTALL_DESC</description>
+	<files>
+		<filename>index.html</filename>
+		<filename>logo_siteguarding.png</filename>
+		<filename>sgantivirus.login.php</filename>
+		<filename>EasyRequest.min.php</filename>
+		<filename plugin="jadminbruteforceprotection">jadminbruteforceprotection.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_jadminbruteforceprotection.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_jadminbruteforceprotection.sys.ini</language>
+	</languages>
+	<config>
+        <fields name="params">
+            <fieldset name="basic">
+            
+				<field 
+                    name="captcha_active" 
+                    type="list" 
+                    default="1" 
+                    label="JABP_PLG_CAPTCHA_ACTIVE" 
+                    description="JABP_PLG_CAPTCHA_ACTIVE_DESC">
+    					<option value="1">JYES</option>
+    					<option value="0">JNO</option>
+				</field>
+                
+				<field 
+                    name="captcha_site_key" 
+                    type="text" 
+                    size="50" 
+                    default="" 
+                    label="JABP_PLG_CAPTCHA_SITE_KEY" 
+                    description="JABP_PLG_CAPTCHA_SITE_KEY_DESC" />
+					
+				<field 
+                    name="captcha_secret_key" 
+                    type="text" 
+                    size="50" 
+                    default="" 
+                    label="JABP_PLG_CAPTCHA_SECRET_KEY" 
+                    description="JABP_PLG_CAPTCHA_SECRET_KEY_DESC" />
+                    
+                <field type="spacer" name="spacer_1" hr="true" />
+                <field type="spacer" name="spacer_10" label="JABP_PLG_CAPTCHA_HELP" />
+
+			</fieldset>
+		</fields>
+	</config>
+<updateservers>
+	<server type="extension" priority="1" name="Extension Update Admin Bruteforce Protection">https://www.siteguarding.com/files/jadminbruteforceprotection.xml</server>
+</updateservers>
+</extension>

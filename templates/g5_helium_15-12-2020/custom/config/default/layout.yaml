@@ -1,0 +1,134 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1528896574
+layout:
+  /header/:
+    -
+      - system-messages-1164
+    -
+      - 'logo-9608 25'
+      - 'menu-3668 5'
+      - 'spacer-3952 60'
+      - 'custom-5613 10'
+  /navigation/:
+    -
+      - menu-6409
+  /intro/: {  }
+  /features/: {  }
+  /utility/: {  }
+  /above/: {  }
+  /testimonials/: {  }
+  /expanded/: {  }
+  /container-main/:
+    -
+      -
+        'aside 25':
+          -
+            - position-position-4734
+      -
+        'mainbar 50': {  }
+      -
+        'sidebar 25':
+          -
+            - position-position-3949
+  /footer/:
+    -
+      - totop-6172
+  /offcanvas/:
+    -
+      - mobile-menu-5697
+structure:
+  header:
+    attributes:
+      boxed: ''
+      class: ''
+  navigation:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  intro:
+    type: section
+    attributes:
+      boxed: ''
+  features:
+    type: section
+    attributes:
+      boxed: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+  above:
+    type: section
+    attributes:
+      boxed: ''
+  testimonials:
+    type: section
+    attributes:
+      boxed: ''
+  expanded:
+    type: section
+    attributes:
+      boxed: ''
+  aside:
+    attributes:
+      class: ''
+    block:
+      fixed: '1'
+  mainbar:
+    type: section
+    subtype: main
+  sidebar:
+    type: section
+    subtype: aside
+    attributes:
+      class: ''
+    block:
+      fixed: '1'
+  container-main:
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+  offcanvas:
+    attributes:
+      boxed: ''
+content:
+  logo-9608:
+    title: 'Logo / Image'
+    attributes:
+      url: index.php/home
+      image: 'gantry-media://bersezio.png'
+      link: '1'
+      svg: ''
+      class: ''
+  menu-3668:
+    attributes:
+      enabled: 0
+      menu: menu-login
+  custom-5613:
+    title: 'Custom HTML'
+    attributes:
+      html: "<?php\n$usuario =JFactory::getUser()->get('name');\nif ($usuario<>''){\necho $usuario;\n}\n?>"
+      filter: '1'
+  menu-6409:
+    attributes:
+      menu: cobranzas
+  position-position-4734:
+    title: Aside
+    attributes:
+      key: aside
+  position-position-3949:
+    title: Sidebar
+    attributes:
+      key: sidebar
+  totop-6172:
+    title: 'To Top'
+    attributes:
+      enabled: 0

@@ -1,0 +1,385 @@
+/* el selector de intervinientes internos estaba mostrando una sola línea por la altura definida en el inputbox */
+select#cobranzas___interviniente_1 {
+    min-height: 100px !important;
+}
+
+/*arregla los botones de navegacion de las listas tienen diferentes alturas*/
+.fabrikNav .list-footer .limit, .fabrikNav .list-footer .limit .add-on{
+    display: inline-flex !important;
+}
+
+.fabrikNav .list-footer .limit .add-on label{
+    display: contents !important;
+}
+
+.fabrikNav .list-footer .limit .add-on small{
+    height: 17px;
+}
+/*reubicación botón Añadir Pagos y Fechas críticas */
+
+#listform_49_com_content_49 .nav-pills.pull-left, #listform_9_com_content_9 .nav-pills.pull-left, #listform_59_com_content_59 .nav-pills.pull-left{
+	margin:-45px 0px 0px 140px !important;
+}
+
+/*reubicación botón submint del form Planilla 	margin: -60px 0px 0px 390px !important;
+.button.consultar{
+	margin: -175px 0px 0px 565px !important;
+}*/
+
+/*apagar el width 100% del form buscar planilla filtro para acomodar el botón buscar */
+fieldset#group68, fieldset#group68 div.row-fluid{
+	width: auto;
+	float: left;
+}
+
+
+/* espaciado en Planilla*/
+.row-fluid.nav{
+	display:none;
+}
+
+/* evita que los botones add y ver del dropdown se bajen una linea*/
+.plg-databasejoin br {
+    display: none;
+}
+
+/*saca linea en blanco de los botones Consultar, etc */
+.form-actions{
+	margin: 0px;
+	padding: 0px;
+}
+
+/* borra el botón Limpiar filtros en las listas 
+#listform_25_com_content_25 .clearFilters, #listform_26_com_content_26 .clearFilters {
+	display:none;
+}*/
+
+/*saca espacio arriba del input del filtro en listform_25 y 26*/
+#listform_25_com_content_25 ul.nav.pull-right, #listform_26_com_content_26 ul.nav.pull-right, #listform_51_com_content_51 ul.nav.pull-right,  #listform_52_com_content_52 ul.nav.pull-right, #listform_21_com_fabrik_21 ul.nav.pull-right{
+	margin: 0px;
+}	
+
+/* esconde columna mensual en planilla*/
+table#fabrik_list_21_group_37  tr td:nth-child(11){
+	display:none;
+}
+
+/*espaciado superior - arriba entre nombre de cliente y el menú en el form Cobranzas*/
+.nav-pills.pull-left{
+	margin:0px;
+}
+
+
+
+/* espaciado en grupo derivadores y profesional interviniente*/
+#group9 .row-fluid, #group10 .row-fluid {
+	margin-bottom:10px;
+/*	border-style:solid;*/
+}
+
+/*tamaño logo home*/
+.g-content.g-particle img{
+    max-width: 100%;
+}
+
+#g-navigation .g-main-nav .g-toplevel{
+    line-height: 1;
+    margin: 0px;
+    padding: 2px 0px 0px 0px;
+    border: 0 none;
+    height: 23px;
+}
+
+/*alineo todo a la derecha si es entero o decimal*/
+.decimal,
+.integer{
+text-align:right;
+}
+
+/*ancho columna fecha  en tabla Ingresos/Egresos*/
+.fabrik_list_19_group_34 
+{
+	width:15%	;
+}
+
+/*color de la línea en la tabla del formulario Caja. Verde si es un cobro, rosa si es un pago*/
+.pago0{
+	background-color: #e1fded	;
+}
+.pago1{
+	background-color: #ffeded;
+}
+
+/*elimina la X en la cabecera de las listas table#list_25_com_content_25  tr td:nth-child(3), table#list_26_com_content_26 tr th:nth-child(3)*/
+th.heading.fabrik_ordercell.fabrik_actions{
+	display: none;
+}
+
+/*estilo login */
+.well{
+	border: none;
+	background-color: #ffffff;
+	-webkit-box-shadow: none;
+	padding:35px 4px 0px 0px;
+}
+.login input{
+	border: none;
+	border-bottom-style: solid;
+	border-width: 1px;
+	box-shadow: none;
+	border-color: #000000;
+	border-radius: 0px;
+}
+#username{
+	placeholder: "Usuario";
+}	
+
+/*mensajes en la cabecera*/
+.alert{
+	padding:0px 0px 0px 10px !important;
+	background-color:#ffffff;
+	position: absolute;
+	width: 45%;
+	left: 50%;
+/*	top: 140%;*/
+}	
+
+#system-message {
+  margin: 0 auto;
+  padding: 0px 0 0;
+}
+
+.close
+{
+	font-size: 35px;
+}	
+
+h4.alert-heading{
+	display:none;
+}	
+
+/*ensancha columna de nombres de campos en pantalla Añadir Registro de pago*/
+#form_9 .control-label, #form_9_271507 .control-label{
+	width: 240px !important;
+	padding: 0px 10px 0px 0px;
+}
+
+/* esconde el día del Birthday mensual*/
+#cobranzas___mensual_0, #___mensual_0{
+	display:none;
+}
+
+/* ancho del mes Birthday mensual*/
+#cobranzas___mensual_1, #___mensual_1{
+	width: 100px;
+}
+
+/* tamaño letras del menu*/
+#g-navigation .g-menu-item-container{
+	font-size: 13px;
+	font-weight: 100;
+}
+
+/* altura barra inferior negra */
+#g-footer .g-totop{
+    line-height: 1;
+}
+
+/*quita el dropdown en la lista. los 3 botones, editar, ver y eliminar*/
+/*#list_29_com_content_29 .fabrik_actions {visibility: hidden}*/
+#list_29_com_content_29 .fabrik_actions {display: none;}
+#list_30_com_content_30 .fabrik_actions {display: none;}
+#list_31_com_content_31 .fabrik_actions {display: none;}
+#list_32_com_content_32 .fabrik_actions {display: none;}
+#list_33_com_content_33 .fabrik_actions {display: none;}
+#list_36_mod_fabrik_list_93 .fabrik_actions {display: none;}
+#list_38_mod_fabrik_list_94 .fabrik_actions {display: none;}
+#list_25_com_content_25 .fabrik_actions {display: none;}
+#list_26_com_content_26 .fabrik_actions {display: none;}
+#listform_21_com_fabrik_21 .fabrik_actions {display: none;}
+#list_9_com_fabrik_9 .fabrik_actions {display: none;}
+#listform_20_com_fabrik_20 .fabrik_actions {display: none;}
+
+/*titulo de listas total_ingreso_caja y total_egreso_caja en pantalla Caja */
+h3.g-title
+{
+   font-size: 14pt;
+   text-decoration: underline;
+}
+
+/* quitar que pueda registrarse una persona en el login */
+/* si quiero eliminar restaurar usuario y restaurar contraseña  solo poner .nav-tabs.nav-stacked 
+.nav-tabs.nav-stacked > li:last-child > a{
+	display: none;
+}	*/
+	
+/* campo de color para casos cerrados */
+#cobranzas___cerrado{
+    background-color: #ffffff;
+    color: #060606;
+    font-weight: bold;
+    padding: 9px 100px 10px 100px;
+    border: cyan;
+    border-style: solid;
+    border-radius: 45px;
+}
+
+#___registrar_deuda_form.fabrikinput.button.btn {
+  margin: 50px 0 0 -180px !important;
+  height: 30px;
+  background: #8d253f;
+  color: #ffffff;
+ } 
+ 
+.encabezado_ancho{
+	min-width: 180px;
+}
+
+/* apagar el limpiar filtro de la busqueda en form Planilla*/
+.clearFilters {
+   display: none;
+}
+
+/* tamaño font titulo */
+h1{
+	font-size: 1rem;
+	font-weight: 100;
+}
+	
+/* setea espacio entre campos */
+#g-intro  {
+  line-height: 20px;
+ } 
+
+#g-intro .control-group {
+    margin-bottom: 5px;
+}
+
+/* ancho de los campos date .fabrikinput .inputbox .input .input-medium{ */
+.input-append{
+	width: 110px;
+	height: 30px !important;
+}
+
+/* altura de los campos input*/
+.inputbox{
+	height: 30px;
+	max-height: 30px;
+}
+
+.calendarbutton {
+	max-height: 30px !important;
+	padding: 6px !important;
+}
+/* acomodar los botones junto a los calendarios */
+button{
+	height:30px;
+}
+
+/* acomodar los botones junto a los input */
+.btn-group{
+	vertical-align: top;
+	height:30px;
+}
+
+/* altura de los campos multi seleccion*/
+.inputbox.span4{
+	height: 100px;
+	max-height: 100px;
+	width: 80%;
+}
+
+/*tamaño letras en Planilla mensual
+#listform_21_com_fabrik_21 .fabrikDataContainer {
+	font-size:12px;
+		padding: 0px !important;
+}
+*/
+
+/*alinear a la derecha columan monto comisión derivador y monto comision profesional interviniente en Comisiones pendientes*/
+table#list_25_com_content_25  tr td:nth-child(3), table#list_26_com_content_26 tr td:nth-child(3)
+{
+	text-align: right;
+}
+	
+.g-block.size-69{
+	padding: 0px 10px 0px 10px;
+}
+
+// Small devices (landscape phones, 300 a 576)
+@media (max-width:576px) and (min-width: 300px) {
+#g-intro .g-block.size-100{
+max-width: 220px !important;
+margin: auto !important;
+background: #ffffff;
+margin: 0px 10px;
+padding: 0px 10px 0px 10px;
+}
+g-block.size-69{
+padding: 0px 10px 0px 10px;
+}
+
+#txt-mainbar{
+  color: #000000; 
+  padding:0px !important;
+  margin: 0px 10px;
+}
+}
+
+
+// Medium devices (tablets, 577 a 768px )
+@media (max-width:768px) and  (min-width: 577px) {
+#g-intro .g-block.size-100{
+max-width: 220px !important;
+margin: auto !important;
+background: #ffffff;
+margin: 0px 10px;
+padding: 0px 10px 0px 10px;
+}
+
+#txt-mainbar{
+  color: #000000; 
+  padding:0px !important;
+  margin: 0px 10px;
+}
+}
+
+// Large devices (desktops, 768 a 1200px )
+@media (max-width:769px) and (min-width: 769px){
+#g-intro , #g-page-surround{
+max-width: 900px !important	;
+margin: auto !important;
+background: #ffffff;
+padding: 0px 10px 0px 10px;
+}
+
+#txt-mainbar{
+  color: #000000; 
+  padding:0px !important;
+  margin: 0px 10px;
+}
+}
+
+// Extra large devices (large desktops, 1200px a 2000px)
+@media (max-width:2000px) and (min-width: 1201px) {
+#g-intro .g-block.size-100, #g-intro .g-grid , #g-page-surround{
+max-width: 1200px !important;
+margin: auto !important;
+margin-left: auto;
+margin-right: auto;
+background: #ffffff;
+padding: 0px 10px 0px 10px;
+}
+}
+ 
+/*
+#g-intro .g-grid{
+max-width: 900px !important;
+margin: auto !important;
+background: #ffffff;
+#txt-mainbar{
+  color: #000000; 
+  padding:0px 10px !important;
+  }
+}
+*/

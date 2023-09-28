@@ -1,0 +1,11 @@
+preset: preset1
+font:
+  family-default: family=Quattrocento+Sans
+  family-title: family=Quattrocento+Sans
+header:
+  background-overlay: disabled
+offcanvas:
+  width: 12rem
+breakpoints:
+  large-desktop-container: 75rem
+  desktop-container: 60rem

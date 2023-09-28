@@ -1,0 +1,6 @@
+enabled: '0'
+css:
+  class: ''
+icon: 'fa fa-chevron-up fa-fw'
+content: ''
+title: 'Back to top'

@@ -1,0 +1,36 @@
+ordering:
+  m-login:
+    m-ingreso: ''
+    m-editar-datos: ''
+    m-cerrar-sesion: ''
+items:
+  m-login:
+    id: 128
+    rel: ''
+    dropdown_dir: right
+    dropdown_hide: '0'
+    width: auto
+    icon: 'fa fa-user-circle fa-lg'
+    columns:
+      - 100
+  m-login/m-ingreso:
+    id: 125
+    rel: ''
+    dropdown_dir: right
+    dropdown_hide: '0'
+    width: auto
+    icon: 'fa fa-lock'
+  m-login/m-editar-datos:
+    id: 126
+    rel: ''
+    dropdown_dir: right
+    dropdown_hide: '0'
+    width: auto
+    icon: 'fa fa-user-md'
+  m-login/m-cerrar-sesion:
+    id: 127
+    rel: ''
+    dropdown_dir: right
+    dropdown_hide: '0'
+    width: auto
+    icon: 'fa fa-unlock'

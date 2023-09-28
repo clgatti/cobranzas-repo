@@ -1,0 +1,68 @@
+name: 9
+timestamp: 1664819128
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1528896574
+positions:
+  aside: Aside
+  sidebar: Sidebar
+sections:
+  navigation: Navigation
+  intro: Intro
+  features: Features
+  utility: Utility
+  above: Above
+  testimonials: Testimonials
+  expanded: Expanded
+  header: Header
+  aside: Aside
+  sidebar: Sidebar
+  mainbar: Mainbar
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  menu:
+    menu-6409: Menu
+    menu-5345: Menu
+  messages:
+    system-messages-6615: 'System Messages'
+  logo:
+    logo-9608: 'Logo / Image'
+  spacer:
+    spacer-3142: Spacer
+  custom:
+    custom-3916: 'Custom HTML'
+  position:
+    position-position-4734: Aside
+    position-position-3949: Sidebar
+  totop:
+    totop-6854: 'To Top'
+  mobile-menu:
+    mobile-menu-5697: Mobile-menu
+inherit:
+  default:
+    navigation: navigation
+    header: header
+    intro: intro
+    features: features
+    utility: utility
+    above: above
+    testimonials: testimonials
+    expanded: expanded
+    aside: aside
+    mainbar: mainbar
+    sidebar: sidebar
+    footer: footer
+    offcanvas: offcanvas
+    menu-6409: menu-6409
+    system-messages-6615: system-messages-1164
+    logo-9608: logo-9608
+    menu-5345: menu-3668
+    spacer-3142: spacer-3952
+    custom-3916: custom-5613
+    position-position-4734: position-position-4734
+    position-position-3949: position-position-3949
+    totop-6854: totop-6172
+    mobile-menu-5697: mobile-menu-5697

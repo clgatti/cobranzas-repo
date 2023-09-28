@@ -1,0 +1,6 @@
+preset: preset1
+offcanvas:
+  width: 12rem
+breakpoints:
+  large-desktop-container: 75rem
+  desktop-container: 60rem

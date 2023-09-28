@@ -1,0 +1,5 @@
+preset: preset1
+base:
+  background: ''
+intro:
+  background: '#ffffff'

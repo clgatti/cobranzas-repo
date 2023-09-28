@@ -1,0 +1,144 @@
+.encabezado_ancho
+{
+	min-width: 250px;
+}
+/* apagar el limpiar filtro de la busqueda */
+.clearFilters {
+   display: none;
+}
+
+/* tamaño font titulo */
+h1{
+	font-size: 1.25rem
+}
+	
+	/* setea espacio entre campos */
+#g-intro  {
+  line-height: 20px;
+ } 
+
+#g-intro .control-group {
+    margin-bottom: 5px;
+}
+
+/* ancho de los campos date .fabrikinput .inputbox .input .input-medium{ */
+.input-append{
+	width: 90px;
+	height: 30px;
+}
+
+/* altura de los campos input*/
+.inputbox
+{
+	height: 30px;
+	max-height: 30px;
+}
+
+.btn 
+{
+	height: 30px;
+	padding: 10px;
+}
+
+/* acomodar los botones junto a los input */
+.btn-group
+{
+	position: absolute !important;
+}
+/* altura de los campos multi seleccion*/
+.inputbox.span4
+{
+	height: 100px;
+	max-height: 100px;
+	width: 80%;
+}
+
+/*tamaño letras en Planilla mensual*/
+
+#listform_21_com_fabrik_21 .fabrikDataContainer
+{
+font-size:12px;
+}
+
+/*tabla Planilla mensual*/
+table
+{
+border-spacing: 1px;
+}
+
+.fabrik_list_21_group_37  
+{
+	line-height:15px !important;
+	padding: 0px !important;
+}
+
+
+table#list_25_com_content_25  tr td:nth-child(3) 
+	{
+	text-align: right;
+}
+
+
+	
+
+// Small devices (landscape phones, 300 a 576)
+@media (max-width:576px) and (min-width: 300px) {
+#g-intro .g-block.size-100{
+max-width: 220px !important;
+margin: auto !important;
+background: #ffffff;
+margin: 0px 10px;
+}
+#txt-mainbar{
+  color: #000000; 
+  padding:0px !important;
+  margin: 0px 10px;
+}
+}
+
+
+// Medium devices (tablets, 577 a 768px )
+@media (max-width:768px) and  (min-width: 577px) {
+#g-intro .g-block.size-100{
+max-width: 220px !important;
+margin: auto !important;
+background: #ffffff;
+margin: 0px 10px;
+}
+#txt-mainbar{
+  color: #000000; 
+  padding:0px !important;
+  margin: 0px 10px;
+}
+}
+
+// Large devices (desktops, 768 a 1200px )
+@media (max-width:769px) and (min-width: 769px){
+#g-intro {
+max-width: 900px !important	;
+margin: auto !important;
+background: #ffffff;
+}
+#txt-mainbar{
+  color: #000000; 
+  padding:0px !important;
+  margin: 0px 10px;
+}
+}
+
+// Extra large devices (large desktops, 1200px a 2000px)
+@media (max-width:2000px) and (min-width: 1201px) {
+#g-intro .g-block.size-100{
+max-width: 900px !important;
+margin: auto !important;
+background: #ffffff;
+}
+#g-intro .g-grid{
+max-width: 900px !important;
+margin: auto !important;
+background: #ffffff;
+}#txt-mainbar{
+  color: #000000; 
+  padding:0px 10px !important;
+  }
+}

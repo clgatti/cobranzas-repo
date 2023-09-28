@@ -1,0 +1,109 @@
+ordering:
+  m-inicio: ''
+  m-fechas-criticas: ''
+  m-reportes: ''
+  m-planilla: ''
+  m-caja-ingresos-egresos: ''
+  m-comisiones-participaciones:
+    comisiones-pendientes: ''
+    m-facturacion-pendiente: ''
+  m-monotributos: ''
+  m-administracion:
+    m-formas-pago: ''
+    m-procesos: ''
+    m-clientes: ''
+    m-derivadores: ''
+    m-profesional-interviniente: ''
+    m-comprobante-pago: ''
+    m-beneficio: ''
+    m-tipo-liquidacion: ''
+    m-instancias: ''
+    m-localidades: ''
+    m-bancos: ''
+    m-lista-usuarios: ''
+  home: ''
+  m-sistema:
+    m-editar-datos: ''
+    m-cerrar-sesion: ''
+items:
+  m-inicio:
+    id: 114
+    rel: ''
+    dropdown_dir: right
+    dropdown_hide: '0'
+    width: auto
+  m-fechas-criticas:
+    id: 135
+    rel: ''
+  m-reportes:
+    id: 132
+    rel: ''
+  m-planilla:
+    id: 143
+    rel: ''
+  m-caja-ingresos-egresos:
+    id: 206
+    rel: ''
+  m-comisiones-participaciones:
+    id: 144
+    rel: ''
+  m-comisiones-participaciones/comisiones-pendientes:
+    id: 200
+    rel: ''
+  m-comisiones-participaciones/m-facturacion-pendiente:
+    id: 201
+    rel: ''
+  m-monotributos:
+    id: 195
+    rel: ''
+  m-administracion:
+    id: 118
+    rel: ''
+  m-administracion/m-formas-pago:
+    id: 120
+    rel: ''
+  m-administracion/m-procesos:
+    id: 117
+    rel: ''
+  m-administracion/m-clientes:
+    id: 122
+    rel: ''
+  m-administracion/m-derivadores:
+    id: 123
+    rel: ''
+  m-administracion/m-profesional-interviniente:
+    id: 129
+    rel: ''
+  m-administracion/m-comprobante-pago:
+    id: 131
+    rel: ''
+  m-administracion/m-beneficio:
+    id: 136
+    rel: ''
+  m-administracion/m-tipo-liquidacion:
+    id: 137
+    rel: ''
+  m-administracion/m-instancias:
+    id: 138
+    rel: ''
+  m-administracion/m-localidades:
+    id: 140
+    rel: ''
+  m-administracion/m-bancos:
+    id: 139
+    rel: ''
+  m-administracion/m-lista-usuarios:
+    id: 194
+    rel: ''
+  home:
+    id: 101
+    rel: ''
+  m-sistema:
+    id: 197
+    rel: ''
+  m-sistema/m-editar-datos:
+    id: 198
+    rel: ''
+  m-sistema/m-cerrar-sesion:
+    id: 199
+    rel: ''
