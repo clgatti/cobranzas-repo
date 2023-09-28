@@ -168,6 +168,7 @@ class PlgFabrik_FormAutofill extends PlgFabrik_Form
 				 * need __pk_val if 'edit original row'
 				 */
 				$newData->__pk_val = $data->__pk_val;
+				$newData->__elid = $input->get('elid', '');
 
 				foreach ($map as $from => $to)
 				{
@@ -212,15 +213,22 @@ class PlgFabrik_FormAutofill extends PlgFabrik_Form
 		$matched  = false;
 		$toRaw    = $to . '_raw';
 		$fromRaw  = $from . '_raw';
+		$fromId  = $from . '_id';
 
-		if (array_key_exists($from, $data))
+		if (property_exists($data, $from))
 		{
 			$matched = true;
 		}
 
 		$newData->$to = isset($data->$from) ? $data->$from : '';
 
-		if (array_key_exists($fromRaw, $data))
+
+		if (property_exists($data, $fromId))
+		{
+			$matched = true;
+			$fromRaw = $fromId;
+		}
+		else if (property_exists($data, $fromRaw))
 		{
 			$matched = true;
 		}
@@ -232,6 +240,11 @@ class PlgFabrik_FormAutofill extends PlgFabrik_Form
 		else
 		{
 			$newData->$toRaw = isset($data->$fromRaw) ? $data->$fromRaw : '';
+
+			if (strstr($newData->$toRaw, GROUPSPLITTER))
+			{
+				$newData->$toRaw = json_encode(explode(GROUPSPLITTER, $newData->$toRaw));
+			}
 		}
 	}
 }

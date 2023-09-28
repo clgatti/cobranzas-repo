@@ -1075,6 +1075,11 @@ class PlgFabrik_ElementJdate extends PlgFabrik_ElementList
 		// in some corner cases, date will be db name quoted, like in CSV export after an advanced search!
 		$value = trim($value, "'");
 
+		if (strstr($value, '%'))
+		{
+			$value = urldecode($value);
+		}
+
 		//if ($input->get('task') == 'form.process' || ($app->isAdmin() && $input->get('task') == 'process'))
 		if (FabrikWorker::inFormProcess())
 		{
@@ -1599,7 +1604,7 @@ class PlgFabrik_ElementJdate extends PlgFabrik_ElementList
 	 *
 	 * @return  string JLayout render
 	 */
-	protected function autoCompleteFilter($default, $v, $labelValue = null, $normal = true, $container)
+	protected function autoCompleteFilter($default, $v, $labelValue = null, $normal = true, $container = null)
 	{
 		if (get_magic_quotes_gpc())
 		{
@@ -2617,7 +2622,12 @@ class PlgFabrik_ElementJdate extends PlgFabrik_ElementList
 	{
 		$params  = $this->getParams();
 		$class   = $this->filterClass();
-		$calOpts = array('class' => $class, 'maxlength' => '19', 'size' => 16);
+		$calOpts = array(
+			'class' => $class,
+			'maxlength' => '19',
+			'size' => 16,
+			'weekNumbers' => $params->get('jdate_show_week_numbers', '0') === '1'
+		);
 
 		if ($params->get('jdate_allow_typing_in_field', true) == false)
 		{
@@ -2644,18 +2654,23 @@ class PlgFabrik_ElementJdate extends PlgFabrik_ElementList
 		$deps   = array_key_exists($key, $shim) ? $shim[$key]->deps : array();
 		$params = $this->getParams();
 
-		if (!in_array('lib/datejs/date', $deps))
+		if (empty($deps))
 		{
-			$deps[] = 'lib/datejs/globalization/' . JFactory::getLanguage()->getTag();
-			$deps[] = 'lib/datejs/core';
-			$deps[] = 'lib/datejs/parser';
-			$deps[] = 'lib/datejs/extras';
-		}
-
-		if (count($deps) > 0)
-		{
+			/**
+			 * Main datejs files (core, parser) require the globalization to be loaded first,
+			 * to add the Date.CultureInfo object, so we have to shim it thusly
+			 */
 			$s          = new stdClass;
-			$s->deps    = $deps;
+			$s->deps    = [];
+			$globalShim = new stdClass();
+			$globalShim->deps = ['lib/datejs/globalization/' . JFactory::getLanguage()->getTag()];
+			$s->deps[] = 'lib/datejs/globalization/' . JFactory::getLanguage()->getTag();
+			$s->deps[] = 'lib/datejs/core';
+			$shim['lib/datejs/core'] = $globalShim;
+			$s->deps[] = 'lib/datejs/parser';
+			$shim['lib/datejs/parser'] = $globalShim;
+			$s->deps[] = 'lib/datejs/extras';
+			$shim['lib/datejs/extras'] = $globalShim;
 			$shim[$key] = $s;
 		}
 

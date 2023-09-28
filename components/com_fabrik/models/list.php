@@ -9242,7 +9242,7 @@ class FabrikFEModelList extends JModelForm
 	 *
 	 * @return  bool
 	 */
-	public function fieldExists($field, $ignore = array(), $elGroupModel)
+	public function fieldExists($field, $ignore = array(), $elGroupModel = null)
 	{
 		$field = JString::strtolower($field);
 		$groupModels = $this->getFormGroupElementData();
@@ -11368,6 +11368,7 @@ class FabrikFEModelList extends JModelForm
 	public function resetQuery()
 	{
 		unset($this->_whereSQL);
+		unset($this->orderBy);
 		unset($this->data);
 	}
 

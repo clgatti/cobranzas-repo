@@ -932,7 +932,7 @@ class PlgFabrik_ElementFileupload extends PlgFabrik_Element
 					$title_name = str_replace('.', '___', $params->get('fu_title_element'));
 				}
 
-				if (array_key_exists($title_name, $thisRow))
+				if (property_exists($thisRow, $title_name))
 				{
 					if (!empty($thisRow->$title_name))
 					{
@@ -2819,7 +2819,7 @@ class PlgFabrik_ElementFileupload extends PlgFabrik_Element
 	 *
 	 * @return    string    Download link
 	 */
-	protected function downloadLink($value, $data, $repeatCounter = 0, $ajaxIndex)
+	protected function downloadLink($value, $data, $repeatCounter = 0, $ajaxIndex = '')
 	{
 		$input     = $this->app->input;
 		$params    = $this->getParams();
@@ -3291,7 +3291,7 @@ class PlgFabrik_ElementFileupload extends PlgFabrik_Element
 			{
 				foreach ($rows as $row)
 				{
-					if (array_key_exists($elName . '_raw', $row))
+					if (property_exists($row, $elName . '_raw'))
 					{
 						if ($this->isJoin())
 						{
@@ -4043,6 +4043,7 @@ class PlgFabrik_ElementFileupload extends PlgFabrik_Element
 
 		if (!empty($php))
 		{
+			FabrikWorker::clearEval();
 			$formModel = $this->getFormModel();
 			$filename = Html::isDebug() ? eval($php) : @eval($php);
 			FabrikWorker::logEval($filename, 'Eval exception : ' . $this->getElement()->name . '::renameFile() : ' . $filename . ' : %s');

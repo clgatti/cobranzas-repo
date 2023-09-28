@@ -27,7 +27,7 @@ class JConfig {
 	public $ftp_user = '';
 	public $ftp_root = '';
 	public $ftp_enable = '0';
-	public $offset = 'UTC';
+	public $offset = 'America/Argentina/Buenos_Aires';
 	public $mailonline = '1';
 	public $mailer = 'mail';
 	public $mailfrom = 'gatticlaudio@yahoo.com.ar';
@@ -54,8 +54,8 @@ class JConfig {
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
 	public $feed_email = 'none';
-	public $log_path = '/home/c2001101/public_html/cobranzas/administrator/logs';
-	public $tmp_path = '/home/c2001101/public_html/cobranzas/tmp';
+	public $log_path = 'c:\\wamp64\\www\\cobranzas\\tmp';
+	public $tmp_path = 'c:\\wamp64\\www\\cobranzas\\tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
 	public $shared_session = '0';
@@ -95,4 +95,5 @@ class JConfig {
 	public $cookie_domain = '';
 	public $cookie_path = '';
 	public $asset_id = '1';
+	public $behind_loadbalancer = '0';
 }
